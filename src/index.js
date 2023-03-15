@@ -73,7 +73,9 @@ async function onLoadmoreImages([entry], obs) {
       }
       const { images, totalImages } = await getImages(query, state.page);
       if (refs.gallery.children.length + PER_PAGE >= totalImages) {
-        Notify.info(`Sorry, there is all images by query ${query}`);
+        Notify.info(
+          "We're sorry, but you've reached the end of search results."
+        );
         return;
       }
       refs.gallery.insertAdjacentHTML('beforeend', galleryMarkup(images));
