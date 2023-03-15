@@ -1,11 +1,12 @@
 import axios from 'axios';
+import { PER_PAGE, API_KEY } from '../utils/constants';
 
 const imageAgent = axios.create({
   baseURL: 'https://pixabay.com/api/',
   params: {
-    key: '34376163-a7d9ba919838b460ea8d86c54',
+    key: API_KEY,
     image_type: 'photo',
-    per_page: 12,
+    per_page: PER_PAGE,
     orientation: 'horizontal',
     safesearch: true,
   },
